@@ -8,37 +8,56 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <form>
+    <form class="forms" name="formulario">
       <h2>Decodificando</h2>
       <h3>Escreva sua Mensagem Aqui</h3>
-      <textarea type="input" id="input" rows="4" cols="50"></textarea>
-      <label for="decodificador">Escolha seu método de Codificação:</label>
-      <select id="decodificador" name="decodificador">
-        <option value="base64">Base 64</option>
-        <option value="cifraCesar">Cifra de Cesar</option>
-      </select>
-      <fieldset class="incremento" id="incremento">
-        <label for="incremento"
-          >Informe o incremento do código (entre 1 e 99):</label
-        >
-        <input type="number" min="0" max="99" />
-      </fieldset>
-      <fieldset class="tipo">
+
+      <div class="entrada">
+        <textarea type="input" id="input" rows="4" cols="50"></textarea>
+      </div>
+
+      <div class="escolhecod">
+        <label for="decodificador">Escolha seu método de Codificação:</label>
+        <select id="decodificador" name="decodificador">
+          <option value="base64">Base 64</option>
+          <option value="cifraCesar">Cifra de Cesar</option>
+        </select>
+      </div>
+
+      <div class="incremento" id="valorIncremento">
+        <label for="incremento">Informe o incremento do código:</label>
+        <input
+          type="number"
+          id="valorInc"
+          default="0"
+          min="1"
+          value="1"
+          max="99"
+        />
+      </div>
+
+      <div class="escolheTraducao">
         <input type="radio" id="codificar" name="escolhe" value="codificar" />
         <label for="codificar">Codificar</label>
         <input type="radio" id="Decodif" name="escolhe" value="decodif" />
         <label for="decodificar">Decodificar</label>
-        <button class="enviar" id="enviar" onclick="traduz()">
+      </div>
+
+      <div class="divbotao">
+        <button type="submit" class="enviar" id="enviar">
           Codificar Mensagem!
         </button>
-      </fieldset>
-      <textarea
-        disabled
-        type="output"
-        id="output"
-        rows="4"
-        cols="50"
-      ></textarea>
+      </div>
+
+      <div class="output">
+        <textarea
+          disabled
+          type="output"
+          id="output"
+          rows="4"
+          cols="50"
+        ></textarea>
+      </div>
     </form>
     <script src="./index.js"></script>
   </body>
