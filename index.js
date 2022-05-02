@@ -54,7 +54,7 @@ function cesar(escolhe, mensagem, numeroIncremento) {
 
   for (var i = 0; i < mensagem.length; i++) {
     var letra = mensagem[i]
-    var codigo = mensagem.charCodeAt()
+    var codigo = letra.charCodeAt()
 
     if (escolhe == 'codificar') {
       codigo += numeroIncremento
