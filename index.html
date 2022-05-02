@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decodificando</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form>
+      <h2>Decodificando</h2>
+      <h3>Escreva sua Mensagem Aqui</h3>
+      <textarea type="input" id="input" rows="4" cols="50"></textarea>
+      <label for="decodificador">Escolha seu método de Codificação:</label>
+      <select id="decodificador" name="decodificador">
+        <option value="base64">Base 64</option>
+        <option value="cifraCesar">Cifra de Cesar</option>
+      </select>
+      <fieldset class="incremento" id="incremento">
+        <label for="incremento"
+          >Informe o incremento do código (entre 1 e 99):</label
+        >
+        <input type="number" min="0" max="99" />
+      </fieldset>
+      <fieldset class="tipo">
+        <input type="radio" id="codificar" name="escolhe" value="codificar" />
+        <label for="codificar">Codificar</label>
+        <input type="radio" id="Decodif" name="escolhe" value="decodif" />
+        <label for="decodificar">Decodificar</label>
+        <button class="enviar" id="enviar" onclick="traduz()">
+          Codificar Mensagem!
+        </button>
+      </fieldset>
+      <textarea
+        disabled
+        type="output"
+        id="output"
+        rows="4"
+        cols="50"
+      ></textarea>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
