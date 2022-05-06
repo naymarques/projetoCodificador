@@ -23,7 +23,7 @@ tipo.addEventListener('change', function () {
   }
 })
 
-// base 64
+// Resultado
 
 var formulario = document.forms.formulario
 
@@ -46,6 +46,15 @@ formulario.addEventListener('submit', function (e) {
   resultadoTexto.innerHTML = `${mensagemFinal}`
 })
 
+/* Base */
+function base64(escolhe, mensagem) {
+  if (escolhe == 'codificar') {
+    return btoa(mensagem)
+  } else {
+    return atob(mensagem)
+  }
+}
+
 /* Cifra */
 function cesar(escolhe, mensagem, numeroIncremento) {
   numeroIncremento = Number(numeroIncremento)
@@ -64,13 +73,4 @@ function cesar(escolhe, mensagem, numeroIncremento) {
     mensagemFinal += String.fromCharCode(codigo)
   }
   return mensagemFinal
-}
-
-/* Base */
-function base64(escolhe, mensagem) {
-  if (escolhe == 'codificar') {
-    return btoa(mensagem)
-  } else {
-    return atob(mensagem)
-  }
 }
